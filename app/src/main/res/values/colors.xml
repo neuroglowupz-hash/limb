@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="limb_bg_dark">#0D0D0E</color>
+    <color name="limb_surface_dark">#161619</color>
+    <color name="limb_bg_light">#F6F6F8</color>
+    <color name="limb_surface_light">#FFFFFF</color>
+    <color name="limb_accent">#FFFFFF</color>
+    <color name="ic_launcher_background">#303030</color>
+</resources>
