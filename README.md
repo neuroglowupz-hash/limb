@@ -14,6 +14,7 @@
 
 <p align="center">
   <a href="#-key-features"><b>Explore Features</b></a> •
+  <a href="#-limb-arcade--monochrome-snake-mini"><b>Arcade Snake</b></a> •
   <a href="#-the-hyperspace-flow"><b>Hyperspace Flow</b></a> •
   <a href="#-diagnostic-matrix"><b>Diagnostic Suite</b></a> •
   <a href="#-tech-stack"><b>Tech Stack</b></a> •
@@ -27,6 +28,29 @@
 ---
 
 </div>
+
+<br/>
+
+## 🕹️ Limb Arcade — Monochrome Snake Mini
+
+> *A pure black & white, retro cybernetic digitizer & latency verification visualizer.*
+
+<div align="center">
+
+<img src="./assets/snake_game.svg" width="100%" alt="Monochrome Snake Mini Game" />
+
+<br/>
+
+```
+┌────────────────────────────────────────────────────────────────────────┐
+│  ▲ [W] : UP    │  ◄ [A] : LEFT  │  ▼ [S] : DOWN  │  ► [D] : RIGHT      │
+│  SCORE: 0890   │  LENGTH: 6 px  │  REFRESH: 120Hz│  TELEMETRY: NOMINAL │
+└────────────────────────────────────────────────────────────────────────┘
+```
+
+</div>
+
+---
 
 <br/>
 

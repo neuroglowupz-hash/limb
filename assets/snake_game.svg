@@ -1,0 +1,199 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 380" width="100%" height="380">
+  <defs>
+    <style>
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.2; }
+      }
+      @keyframes foodGlow {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.25); opacity: 0.6; }
+      }
+      @keyframes scanline {
+        0% { transform: translateY(-100%); }
+        100% { transform: translateY(100%); }
+      }
+      @keyframes snakeMove1 {
+        0% { transform: translate(0px, 0px); }
+        12% { transform: translate(120px, 0px); }
+        25% { transform: translate(120px, 80px); }
+        37% { transform: translate(240px, 80px); }
+        50% { transform: translate(240px, 0px); }
+        62% { transform: translate(360px, 0px); }
+        75% { transform: translate(360px, 120px); }
+        87% { transform: translate(180px, 120px); }
+        100% { transform: translate(0px, 0px); }
+      }
+      @keyframes snakeMove2 {
+        0% { transform: translate(0px, 0px); }
+        12% { transform: translate(100px, 0px); }
+        25% { transform: translate(100px, 80px); }
+        37% { transform: translate(220px, 80px); }
+        50% { transform: translate(220px, 0px); }
+        62% { transform: translate(340px, 0px); }
+        75% { transform: translate(340px, 120px); }
+        87% { transform: translate(160px, 120px); }
+        100% { transform: translate(0px, 0px); }
+      }
+      @keyframes snakeMove3 {
+        0% { transform: translate(0px, 0px); }
+        12% { transform: translate(80px, 0px); }
+        25% { transform: translate(80px, 80px); }
+        37% { transform: translate(200px, 80px); }
+        50% { transform: translate(200px, 0px); }
+        62% { transform: translate(320px, 0px); }
+        75% { transform: translate(320px, 120px); }
+        87% { transform: translate(140px, 120px); }
+        100% { transform: translate(0px, 0px); }
+      }
+      @keyframes snakeMove4 {
+        0% { transform: translate(0px, 0px); }
+        12% { transform: translate(60px, 0px); }
+        25% { transform: translate(60px, 80px); }
+        37% { transform: translate(180px, 80px); }
+        50% { transform: translate(180px, 0px); }
+        62% { transform: translate(300px, 0px); }
+        75% { transform: translate(300px, 120px); }
+        87% { transform: translate(120px, 120px); }
+        100% { transform: translate(0px, 0px); }
+      }
+      @keyframes snakeMove5 {
+        0% { transform: translate(0px, 0px); }
+        12% { transform: translate(40px, 0px); }
+        25% { transform: translate(40px, 80px); }
+        37% { transform: translate(160px, 80px); }
+        50% { transform: translate(160px, 0px); }
+        62% { transform: translate(280px, 0px); }
+        75% { transform: translate(280px, 120px); }
+        87% { transform: translate(100px, 120px); }
+        100% { transform: translate(0px, 0px); }
+      }
+      @keyframes snakeMove6 {
+        0% { transform: translate(0px, 0px); }
+        12% { transform: translate(20px, 0px); }
+        25% { transform: translate(20px, 80px); }
+        37% { transform: translate(140px, 80px); }
+        50% { transform: translate(140px, 0px); }
+        62% { transform: translate(260px, 0px); }
+        75% { transform: translate(260px, 120px); }
+        87% { transform: translate(80px, 120px); }
+        100% { transform: translate(0px, 0px); }
+      }
+      @keyframes scorePulse {
+        0%, 100% { opacity: 0.9; }
+        50% { opacity: 1; filter: drop-shadow(0 0 4px #FFFFFF); }
+      }
+      .font-mono {
+        font-family: 'Courier New', Courier, monospace, Consolas, Monaco;
+      }
+      .blink-text {
+        animation: blink 1.2s infinite ease-in-out;
+      }
+      .glow-food {
+        transform-origin: 390px 170px;
+        animation: foodGlow 1s infinite ease-in-out;
+      }
+      .glow-food-2 {
+        transform-origin: 510px 90px;
+        animation: foodGlow 1.4s infinite ease-in-out;
+      }
+      .glow-food-3 {
+        transform-origin: 210px 210px;
+        animation: foodGlow 0.8s infinite ease-in-out;
+      }
+      .score-anim {
+        animation: scorePulse 2s infinite ease-in-out;
+      }
+    </style>
+    
+    <!-- Grid Pattern for Retro Arcade Matrix -->
+    <pattern id="arcadeGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="10" cy="10" r="1" fill="#222222"/>
+    </pattern>
+  </defs>
+
+  <!-- Chassis / Frame Outer -->
+  <rect x="2" y="2" width="796" height="376" rx="16" fill="#000000" stroke="#FFFFFF" stroke-width="2"/>
+  <rect x="8" y="8" width="784" height="364" rx="12" fill="#050505" stroke="#333333" stroke-width="1"/>
+
+  <!-- Top Header Bar -->
+  <path d="M 8 50 L 792 50" stroke="#FFFFFF" stroke-width="1.5"/>
+  <path d="M 8 53 L 792 53" stroke="#222222" stroke-width="1"/>
+  
+  <text x="24" y="32" fill="#FFFFFF" font-size="13" font-weight="bold" letter-spacing="2" class="font-mono">
+    ■ LIMB MINI LABS // HARDWARE SNAKE DIAGNOSTIC
+  </text>
+  
+  <!-- Score & Telemetry Cluster -->
+  <text x="500" y="32" fill="#888888" font-size="12" class="font-mono">SCORE:</text>
+  <text x="555" y="32" fill="#FFFFFF" font-size="13" font-weight="bold" class="font-mono score-anim">0890</text>
+  
+  <text x="615" y="32" fill="#888888" font-size="12" class="font-mono">HI:</text>
+  <text x="640" y="32" fill="#FFFFFF" font-size="13" font-weight="bold" class="font-mono">9999</text>
+  
+  <text x="705" y="32" fill="#FFFFFF" font-size="11" font-weight="bold" class="font-mono blink-text">● LIVE</text>
+
+  <!-- Game Playing Area Canvas -->
+  <rect x="20" y="65" width="760" height="260" rx="6" fill="#0A0A0C" stroke="#222222" stroke-width="1"/>
+  <rect x="20" y="65" width="760" height="260" rx="6" fill="url(#arcadeGrid)"/>
+
+  <!-- Corner HUD Crosshairs -->
+  <path d="M 28 73 L 38 73 M 28 73 L 28 83" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+  <path d="M 772 73 L 762 73 M 772 73 L 772 83" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+  <path d="M 28 317 L 38 317 M 28 317 L 28 307" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+  <path d="M 772 317 L 762 317 M 772 317 L 772 307" stroke="#FFFFFF" stroke-width="1.5" fill="none"/>
+
+  <!-- Food Dots (Pixels) -->
+  <g class="glow-food">
+    <rect x="382" y="162" width="16" height="16" rx="2" fill="#FFFFFF"/>
+    <rect x="386" y="166" width="8" height="8" rx="1" fill="#000000"/>
+  </g>
+  <g class="glow-food-2">
+    <rect x="502" y="82" width="16" height="16" rx="2" fill="#FFFFFF"/>
+    <rect x="506" y="86" width="8" height="8" rx="1" fill="#000000"/>
+  </g>
+  <g class="glow-food-3">
+    <rect x="202" y="202" width="16" height="16" rx="2" fill="#FFFFFF"/>
+    <rect x="206" y="206" width="8" height="8" rx="1" fill="#000000"/>
+  </g>
+
+  <!-- Animated Monochrome Snake Body & Head -->
+  <!-- Tail segment 6 -->
+  <rect x="152" y="92" width="16" height="16" rx="3" fill="#555555" style="animation: snakeMove6 10s infinite cubic-bezier(0.4, 0, 0.2, 1);"/>
+  <!-- Segment 5 -->
+  <rect x="172" y="92" width="16" height="16" rx="3" fill="#777777" style="animation: snakeMove5 10s infinite cubic-bezier(0.4, 0, 0.2, 1);"/>
+  <!-- Segment 4 -->
+  <rect x="192" y="92" width="16" height="16" rx="3" fill="#999999" style="animation: snakeMove4 10s infinite cubic-bezier(0.4, 0, 0.2, 1);"/>
+  <!-- Segment 3 -->
+  <rect x="212" y="92" width="16" height="16" rx="3" fill="#BBBBBB" style="animation: snakeMove3 10s infinite cubic-bezier(0.4, 0, 0.2, 1);"/>
+  <!-- Segment 2 -->
+  <rect x="232" y="92" width="16" height="16" rx="3" fill="#DDDDDD" style="animation: snakeMove2 10s infinite cubic-bezier(0.4, 0, 0.2, 1);"/>
+  
+  <!-- Snake Head (Segment 1) with Pixel Eyes -->
+  <g style="animation: snakeMove1 10s infinite cubic-bezier(0.4, 0, 0.2, 1);">
+    <rect x="252" y="92" width="18" height="18" rx="4" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+    <rect x="262" y="95" width="4" height="4" fill="#000000"/>
+    <rect x="262" y="103" width="4" height="4" fill="#000000"/>
+  </g>
+
+  <!-- Obstacle / Maze Grid Blocks (Black & White Pixel Art) -->
+  <rect x="300" y="240" width="80" height="12" rx="2" fill="#333333" stroke="#666666" stroke-width="0.5"/>
+  <rect x="580" y="140" width="12" height="80" rx="2" fill="#333333" stroke="#666666" stroke-width="0.5"/>
+  <rect x="100" y="140" width="12" height="80" rx="2" fill="#333333" stroke="#666666" stroke-width="0.5"/>
+
+  <!-- CRT Scanline Overlay Effect -->
+  <line x1="20" y1="65" x2="780" y2="65" stroke="#FFFFFF" stroke-width="1" opacity="0.08"/>
+  <line x1="20" y1="130" x2="780" y2="130" stroke="#FFFFFF" stroke-width="0.5" opacity="0.05"/>
+  <line x1="20" y1="195" x2="780" y2="195" stroke="#FFFFFF" stroke-width="0.5" opacity="0.05"/>
+  <line x1="20" y1="260" x2="780" y2="260" stroke="#FFFFFF" stroke-width="0.5" opacity="0.05"/>
+
+  <!-- Bottom Arcade Footer / Controls -->
+  <path d="M 8 340 L 792 340" stroke="#222222" stroke-width="1"/>
+  
+  <text x="24" y="360" fill="#777777" font-size="11" class="font-mono">
+    CONTROLS: [W][A][S][D] / [▲][◄][▼][►]  •  SWIPE ON TOUCH PANEL
+  </text>
+  <text x="640" y="360" fill="#AAAAAA" font-size="11" font-weight="bold" class="font-mono">
+    FPS: 120.0 Hz  OK
+  </text>
+</svg>
