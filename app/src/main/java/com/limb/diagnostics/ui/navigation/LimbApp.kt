@@ -34,6 +34,7 @@ import com.limb.diagnostics.ui.screens.HomeScreen
 import com.limb.diagnostics.ui.screens.OnboardingScanScreen
 import com.limb.diagnostics.ui.screens.QuickCheckScreen
 import com.limb.diagnostics.ui.screens.ReportsScreen
+import com.limb.diagnostics.ui.screens.SnakeGameScreen
 import com.limb.diagnostics.ui.screens.TestsLibraryScreen
 import com.limb.diagnostics.ui.screens.interactive.AudioTestScreen
 import com.limb.diagnostics.ui.screens.interactive.BrightnessTestScreen
@@ -203,7 +204,16 @@ fun LimbApp(repository: DiagnosticRepository) {
                             navController.navigate(Screen.OnboardingScan.route) {
                                 popUpTo(0) { inclusive = true }
                             }
+                        },
+                        onOpenArcade = {
+                            navController.navigate(Screen.SnakeArcade.route)
                         }
+                    )
+                }
+
+                composable(Screen.SnakeArcade.route) {
+                    SnakeGameScreen(
+                        onBack = { navController.popBackStack() }
                     )
                 }
 

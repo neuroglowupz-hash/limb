@@ -35,6 +35,7 @@ fun DeviceInfoScreen(
     onClose: () -> Unit,
     onRerunApp: (() -> Unit)? = null,
     onReplayActivation: (() -> Unit)? = null,
+    onOpenArcade: (() -> Unit)? = null,
     modifier: Modifier = Modifier
 ) {
     val rerunAction = onRerunApp ?: onReplayActivation
@@ -81,6 +82,34 @@ fun DeviceInfoScreen(
                 .padding(vertical = 16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
+            if (onOpenArcade != null) {
+                item {
+                    LimbCard(modifier = Modifier.fillMaxWidth()) {
+                        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+                            Text(
+                                text = "INPUT LATENCY LAB",
+                                style = MaterialTheme.typography.labelMedium,
+                                color = LimbAppTheme.colors.textTertiary,
+                                fontWeight = FontWeight.Bold,
+                                letterSpacing = 1.sp
+                            )
+                            Text(
+                                text = "Test digitizer refresh rate & pointer latency with the Monochrome Retro Snake mini arcade.",
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = LimbAppTheme.colors.textSecondary
+                            )
+                            Spacer(modifier = Modifier.height(4.dp))
+                            LimbButton(
+                                text = "🕹️ Play Monochrome Snake Arcade",
+                                onClick = onOpenArcade,
+                                isPrimary = false,
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                        }
+                    }
+                }
+            }
+
             if (rerunAction != null) {
                 item {
                     LimbCard(modifier = Modifier.fillMaxWidth()) {
